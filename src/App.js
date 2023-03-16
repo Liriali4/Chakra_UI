@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, ChakraProvider, Flex, Grid, Text } from '@chakra-ui/react'
+import { Box, Button, ChakraProvider, Flex, Grid, SimpleGrid, Text } from '@chakra-ui/react'
 
 
 function App() {
@@ -29,23 +29,47 @@ function App() {
             w="90%"
             h="90%"
           >
-        
-        <Box display="grid" gridGap={2} gridAutoFlow="row dense">
-          GridBox
-         <Box bg="#c9c">PPP</Box>
-         <Box bg="#fff">PPP</Box>
-         <Box bg="#000">PPP</Box>
-         <Box bg="#c2c2c2">PPP</Box>
-        </Box>
-
-        <Grid gap={2} autoFlow="row dense">
-          Grid
-          <Box bg="#c9c">PPP</Box>
-         <Box bg="#fff">PPP</Box>
-         <Box bg="#000">PPP</Box>
-         <Box bg="#c2c2c2">PPP</Box>
-        </Grid>
-  </Flex>
+            <SimpleGrid
+              bg='gray.50'
+              columns={{ sm: 2, md: 4 }}
+              spacing='8'
+              p='10'
+              textAlign='center'
+              rounded='lg'
+              color='gray.400'
+            >
+              <Box boxShadow='xs' p='6' rounded='md' bg='white'>
+                xs
+              </Box>
+              <Box boxShadow='sm' p='6' rounded='md' bg='white'>
+                sm
+              </Box>
+              <Box boxShadow='base' p='6' rounded='md' bg='white'>
+                Base
+              </Box>
+              <Box boxShadow='md' p='6' rounded='md' bg='white'>
+                md
+              </Box>
+              <Box boxShadow='lg' p='6' rounded='md' bg='white'>
+                lg
+              </Box>
+              <Box boxShadow='xl' p='6' rounded='md' bg='white'>
+                xl
+              </Box>
+              <Box boxShadow='2xl' p='6' rounded='md' bg='white'>
+                2xl
+              </Box>
+              <Box boxShadow='dark-lg' p='6' rounded='md' bg='white'>
+                Dark lg
+              </Box>
+              <Box boxShadow='outline' p='6' rounded='md' bg='white'>
+                Outline
+              </Box>
+              <Box boxShadow='inner' p='6' rounded='md' bg='white'>
+                Inner
+              </Box>
+            </SimpleGrid>
+          </Flex>
         </Box>
       </Box>
     </ChakraProvider>
