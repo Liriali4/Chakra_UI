@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, ChakraProvider, Flex, Text } from '@chakra-ui/react'
+import { Box, ChakraProvider, Flex, Grid, Text } from '@chakra-ui/react'
 
 
 function App() {
@@ -21,30 +21,31 @@ function App() {
           alignItems="center"
           justifyContent="space-around"
         >
-          <Flex 
-          align="center"
-          justify="space-around" 
+          <Flex
+            align="center"
+            justify="space-around"
+
+            bg="#fff"
+            w="90%"
+            h="90%"
+          >
         
-           bg="#fff"
-           w="90%"
-           h="90%"
-           >
-            <Text bg="#c9c" >Flex Container</Text>
-            
-            <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
-              bgClip="text"
-              fontSize="6xl"
-              fontWeight="extrabold"
-            >Olá Chakra</Text >
+        <Box display="grid" gridGap={2} gridAutoFlow="row dense">
+          GridBox
+         <Box bg="#c9c">PPP</Box>
+         <Box bg="#fff">PPP</Box>
+         <Box bg="#000">PPP</Box>
+         <Box bg="#c2c2c2">PPP</Box>
+        </Box>
 
-            <Box bg="#c9c">
-              Box with Flex props
-            </Box>
-
-
-
-          </Flex>
+        <Grid gap={2} autoFlow="row dense">
+          Grid
+          <Box bg="#c9c">PPP</Box>
+         <Box bg="#fff">PPP</Box>
+         <Box bg="#000">PPP</Box>
+         <Box bg="#c2c2c2">PPP</Box>
+        </Grid>
+  </Flex>
         </Box>
       </Box>
     </ChakraProvider>
