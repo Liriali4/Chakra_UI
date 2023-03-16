@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react'
+import { Box, ChakraProvider, Text } from '@chakra-ui/react'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ChakraProvider>
+      <Box
+        w="100%"
+        h="100vh"
+        bg='tomato'
+      >
+        <Box
+          maxW="960px"
+          mx="auto"
+          bg="#c9c"
+          w="100%"
+          h="100%"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Text
+            bgGradient="linear(to-l, #7928CA, #FF0080)"
+            bgClip="text"
+            fontSize="6xl"
+            fontWeight="extrabold"
+          >Olá Chakra</Text >
+          <Text fontSize="md" >fontSize="md"</Text >
+
+
+          <Text fontSize={32} >font-size 32px</Text>
+
+          <Text fontSize='2em' >fontSize='2em'</Text>
+
+          <Text textAlign={['left', 'center']} >textAlign={['left', 'center']}</Text>
+
+
+        </Box>
+      </Box>
+    </ChakraProvider>
   );
 }
 
 export default App;
+
